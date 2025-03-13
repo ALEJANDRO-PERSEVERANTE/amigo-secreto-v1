@@ -187,5 +187,4 @@ function reiniciarLista() {
     resultado.innerHTML = "";
     /*
        - `resultado.innerHTML = ""`: Limpia el contenido del contenedor de resultados.
-    */
-} -->
+    
