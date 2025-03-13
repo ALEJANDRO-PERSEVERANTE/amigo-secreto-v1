@@ -1,0 +1,285 @@
+
+
+:root {
+    --color-primary:#8e04fb; /* Un morado moderno */
+    --color-secondary: #e0b31f; /* Un amarillo pastel */
+    --color-tertiary: #DFE6E9; /* Un gris claro */
+    --color-button: #FF7675; /* Un rojo coral */
+    --color-button-hover: #E84393; /* Un rosa vibrante */
+    --color-text: #2D3436; /* Un gris oscuro para el texto */
+    --color-white: #FFFFFF; /* Blanco */
+    --color-success: #00B894; /* Verde para indicar éxito */
+    --color-error: #D63031; /* Rojo para indicar error */
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    padding: 20px; /* Añadir un poco de padding para que no esté pegado a los bordes */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Cambiar a auto para que no ocupe toda la altura */
+    width: 90%; /* Reducir el ancho para que no sea tan grande */
+    max-width: 800px; /* Limitar el ancho máximo */
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px; /* Añadir margen para separar del borde de la pantalla */
+}
+
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Reducir el padding */
+    background-color: var(--color-primary);
+}
+
+.header-banner img {
+    width:250px; /* Reducir el tamaño de la imagen */
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid var(--color-white); /* Reducir el grosor del borde */
+    box-shadow: 0 0 10px rgba(29, 27, 27, 0.2); /* Reducir la sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-banner img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
+}
+
+
+.main-title {
+    font-size: 36px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    animation: tituloAnimado 3s infinite alternate ease-in-out; /* Animación */
+}
+
+@keyframes tituloAnimado {
+    0% {
+        transform: translateX(0) scale(1);
+        color: var(--color-white);
+    }
+    50% {
+        transform: translateX(10px) scale(1.1); /* Mover 10px a la derecha */
+        color: #FFD700;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        color: var(--color-white);
+    }
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Reducir el padding */
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 36px; /* Reducir el tamaño de la fuente */
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px; /* Añadir margen inferior */
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+    font-size: 24px; /* Reducir el tamaño de la fuente */
+    font-weight: 700;
+    color: var( --color-white);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px; /* Reducir el ancho máximo */
+    margin-top: 10px; /* Reducir el margen superior */
+}
+
+.input-name {
+    width: 100%;
+    padding: 8px; /* Reducir el padding */
+    border: 2px solid var(--color-primary);
+    border-radius: 20px 0 0 20px; /* Ajustar el radio del borde */
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    transition: border-color 0.3s ease;
+}
+
+.input-name:focus {
+    border-color: var(--color-button);
+    outline: none;
+}
+
+.button-container {
+    width: 100%;
+    max-width: 300px; /* Reducir el ancho máximo */
+    margin-top: 10px; /* Reducir el margen superior */
+}
+
+/* Estilos de botón */
+button {
+    padding: 10px 20px; /* Reducir el padding */
+    font-family: "Inter", sans-serif;
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    border: none;
+    border-radius: 20px; /* Ajustar el radio del borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-add {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border-radius: 0 20px 20px 0; /* Ajustar el radio del borde */
+}
+
+.button-add:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 20px; /* Reducir el padding */
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    margin-top: 10px;
+}
+
+.button-draw img {
+    margin-right: 20px; /* Reducir el margen derecho */
+    transition: transform 0.3s ease;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+}
+
+.button-draw:hover img {
+    transform: rotate(360deg);
+}
+
+.button-reset {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 20px; /* Reducir el padding */
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    margin-top: 10px;
+}
+.button-reset img {
+    margin-right: 20px; /* Reducir el margen derecho */
+    transition: transform 0.10s ease;
+}
+
+.button-reset:hover {
+    background-color: var(--color-button-hover); /* Un rojo más oscuro */
+    transform: translateY(-2px);
+}
+.button-reset:hover img {
+    transform: rotate(360deg);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    margin: 10px 0; /* Reducir el margen */
+}
+
+.result-list {
+    margin-top: 10px; /* Reducir el margen superior */
+    color: var(--color-success);
+    font-size: 18px; /* Reducir el tamaño de la fuente */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Efectos adicionales */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.result-list li {
+    animation: fadeIn 0.5s ease-in-out;
+}
+/* Cambios principales:
+Reducción de márgenes y rellenos:
+
+Se redujeron los valores de margin y padding en varios elementos para que la página no ocupe tanto espacio innecesario.
+
+Por ejemplo, el padding del .header-banner se redujo de 40px 0 a 20px 0, y el padding de los botones se redujo de 15px 30px a 10px 20px.
+
+Ajuste de tamaños:
+
+Se redujo el tamaño de la imagen del banner de 150px a 100px.
+
+Se redujo el tamaño de la fuente en varios elementos, como el .main-title de 48px a 36px y el .section-title de 36px a 24px.
+
+Optimización del ancho:
+
+Se ajustó el ancho del .main-content al 90% del ancho de la pantalla con un max-width de 800px para que no se vea demasiado grande en pantallas grandes.
+
+Mejora de la distribución:
+
+Se añadió un padding al body para que el contenido no esté pegado a los bordes de la pantalla.
+
+Se ajustaron los radios de los bordes para que sean más consistentes y modernos.
+
+Con estos cambios, la página se verá más compacta, profesional y bien distribuida, sin perder la interactividad y el estilo moderno.
+
+New chat
+ */
